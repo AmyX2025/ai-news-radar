@@ -1,105 +1,138 @@
 # AI Signal Board
 
-一个可直接同步到 GitHub 的 AI 新闻聚合项目：
+中文 | [English](#english)
 
-- 页面：高质量静态展示（`index.html`）
-- 抓取：`scripts/update_news.py`
-- 数据：`data/latest-24h.json` + `data/archive.json` + `data/source-status.json` + `data/waytoagi-7d.json`
-- 自动更新：GitHub Actions 每 30 分钟采集一次
+高质量 AI/科技新闻聚合项目，支持静态网页展示、24h 增量更新、WaytoAGI 更新日志、OPML RSS 批量接入、失败源替换与告警。
 
-## 支持站点
+## 中文
 
-- https://techurls.com/
-- https://www.buzzing.cc/
-- https://iris.findtruman.io/web/info_flow
-- https://www.bestblogs.dev/en/newsletter
-- https://tophub.today/
-- https://zeli.app/zh
-- https://ai.hubtoday.app/
-- https://www.aibase.com/zh/news
-- https://aihot.today/
-- https://newsnow.busiyi.world/
+### 1. 这个项目每天更新需要一直开 Codex 吗？
 
-## 设计目标（尽量不漏消息）
+不需要。  
+你只要执行一个命令，或者直接用 GitHub Actions 定时运行即可。
 
-- 多源策略：优先官方 API/Feed，失败时回退页面结构抓取
-- 高频采集：建议每 30 分钟运行一次
-- 归档去重：按 `site + source + title + normalized_url` 生成稳定 ID
-- 增量追踪：记录 `first_seen_at / last_seen_at / published_at`
-- 24h 视图：先做全量采集，再过滤到 AI/科技/机器人/具身智能强相关主题
-- 站点统计：同时展示过滤后数量和全量数量（`count/raw_count`）
-- 前端双视图：`AI 强相关` / `全量` 一键切换
-- 站点内聚合：选定某站点后按分区（`source`）分组展示，避免同分区被打散
-- 全量视图：支持“去重开/关”开关；开启时按“原文标题 + 链接”做随机去重（仅全量生效）
-- 双语显示：英文原生标题优先补中文译文（缓存到 `data/title-zh-cache.json`）
-- 可选 RSS：支持从 OPML 批量导入 RSS，并输出失败源/零更新源告警
+- 本地命令（一次）：
+  - `python scripts/update_news.py --output-dir data --window-hours 24 --rss-opml feeds/follow.opml`
+- 自动化（推荐）：
+  - `.github/workflows/update-news.yml` 已配置定时任务，默认每 30 分钟自动更新并提交数据。
 
-## 站点规则
+### 2. 主要能力
 
-- `zeli.app`：仅采集 `黑客新闻 -> 24h 最热`
-- `iris / techurls / buzzing / newsnow / tophub`：尽量保留分区来源字段（`source`）
+- 10 个网页源聚合（TechURLs / Buzzing / Info Flow / BestBlogs / TopHub / Zeli / AI HubToday / AIbase / AI今日热榜 / NewsNow）
+- OPML RSS 批量接入（`feeds/follow.opml`）
+- 24h 双视图：`AI强相关` / `全量`
+- 全量模式去重开关
+- AI 模式默认去重
+- 站点与分区聚合展示
+- 中英双语标题显示
+- WaytoAGI：`当天` / `近7日` 切换
+- RSS 失败源自动处理：
+  - 能替换官方源则自动替换
+  - 无官方 RSS 的源自动跳过，避免浪费抓取时间
+- 告警数据输出：
+  - `failed_feeds` / `zero_item_feeds` / `skipped_feeds` / `replaced_feeds`
 
-## WaytoAGI 近 7 日更新
+### 3. 数据输出
 
-- 入口页：`https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview`
-- 自动定位“历史更新”页并提取近 7 日条目
-- 输出文件：`data/waytoagi-7d.json`
+- `data/latest-24h.json`
+- `data/archive.json`
+- `data/source-status.json`
+- `data/waytoagi-7d.json`
+- `data/title-zh-cache.json`
 
-## 本地运行
+### 4. 快速开始
 
 ```bash
 cd /Users/carl/Downloads/ai-news-radar
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python scripts/update_news.py --output-dir data --window-hours 24
-# 叠加 OPML RSS（例如 Follow 导出的 follow.opml）
-python scripts/update_news.py --output-dir data --window-hours 24 --rss-opml /Users/carl/Downloads/follow.opml
-```
-
-启动本地预览：
-
-```bash
+python scripts/update_news.py --output-dir data --window-hours 24 --rss-opml feeds/follow.opml
 python -m http.server 8080
-# 打开 http://localhost:8080
 ```
 
-## GitHub 自动更新
+打开：`http://localhost:8080`
 
-工作流文件：
+### 5. Secrets / API 配置说明（重要）
 
-- `.github/workflows/update-news.yml`
+默认情况下，本项目 **不需要任何 API Key** 才能运行核心抓取流程。  
+你目前没有提供 API 密钥，仓库中也不会写入任何密钥信息。
 
-默认每 30 分钟执行一次，自动更新：
+推荐仅在运行环境中配置（不要提交到仓库）：
+
+- 代理（可选）：
+  - `HTTP_PROXY`
+  - `HTTPS_PROXY`
+- 如果你未来接入私有 API/私有 RSS：
+  - 把密钥放到 GitHub Secrets（Actions）或本地环境变量
+  - 不要写入代码、README、日志、`.env` 示例中的真实值
+
+### 6. GitHub 自动更新
+
+工作流：`.github/workflows/update-news.yml`
+
+- 定时：每 30 分钟
+- 任务：执行抓取命令并提交 `data/*`
+- 推送权限：使用 `GITHUB_TOKEN`（workflow 内）
+
+---
+
+## English
+
+Production-grade AI/tech news aggregator with a static web UI, 24h updates, WaytoAGI timeline, and OPML RSS ingestion.
+
+### 1. Do I need Codex running all day?
+
+No.  
+You only need to run one command, or let GitHub Actions run it on schedule.
+
+- One-shot local command:
+  - `python scripts/update_news.py --output-dir data --window-hours 24 --rss-opml feeds/follow.opml`
+- Scheduled automation:
+  - `.github/workflows/update-news.yml` runs every 30 minutes and commits updated data.
+
+### 2. Core features
+
+- Multi-source web aggregation
+- OPML RSS ingestion (`feeds/follow.opml`)
+- 24h two-mode UI (`AI-focused` / `All`)
+- Dedup toggle in All mode, dedup-by-default in AI mode
+- Site + section grouping
+- Bilingual title rendering
+- WaytoAGI toggle (`Today` / `Last 7 Days`)
+- RSS resilience:
+  - Auto-replace failed feeds with official sources when available
+  - Auto-skip unsupported source types (to save crawl time)
+- Alert-friendly status output (`failed_feeds`, `zero_item_feeds`, `skipped_feeds`, `replaced_feeds`)
+
+### 3. Output files
 
 - `data/latest-24h.json`
 - `data/archive.json`
 - `data/source-status.json`
 - `data/waytoagi-7d.json`
+- `data/title-zh-cache.json`
 
-并自动提交到仓库。
+### 4. Quick start
 
-## 目录结构
-
-```text
-ai-news-radar/
-  assets/
-    app.js
-    styles.css
-  data/
-    latest-24h.json
-    archive.json
-    source-status.json
-    waytoagi-7d.json
-  scripts/
-    update_news.py
-  tests/
-  .github/workflows/update-news.yml
-  index.html
-  requirements.txt
+```bash
+cd /Users/carl/Downloads/ai-news-radar
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python scripts/update_news.py --output-dir data --window-hours 24 --rss-opml feeds/follow.opml
+python -m http.server 8080
 ```
 
-## 注意
+Open: `http://localhost:8080`
 
-- 某些站点会有反爬/CDN 限制，脚本已加浏览器 UA 和重试。
-- “绝对不漏”在开放网页场景无法数学保证，但该方案已尽可能降低漏抓概率。
+### 5. Secrets / API notes
+
+By default, this project needs **no API keys** for the core pipeline.  
+No secrets are stored in this repo.
+
+If you later add private APIs/feeds:
+
+- Use environment variables or GitHub Secrets
+- Never commit real tokens/keys
+

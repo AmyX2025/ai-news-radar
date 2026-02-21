@@ -27,7 +27,7 @@ jobs:
 
       - name: Update data
         run: |
-          python scripts/update_news.py --output-dir data --window-hours 24
+          python scripts/update_news.py --output-dir data --window-hours 24 --rss-opml feeds/follow.opml
 
       - name: Commit and push changes
         run: |

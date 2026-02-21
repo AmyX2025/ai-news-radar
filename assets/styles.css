@@ -79,6 +79,20 @@ body::before {
   animation: fade-up 600ms ease;
 }
 
+.hero-headline {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.hero-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  border: 1px solid rgba(24, 19, 16, 0.12);
+  background: rgba(255, 255, 255, 0.85);
+}
+
 .hero-tag {
   margin: 0;
   font-size: 12px;
@@ -521,6 +535,12 @@ select {
   .hero {
     padding: 18px;
     border-radius: 20px;
+  }
+
+  .hero-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
   }
 
   .controls {

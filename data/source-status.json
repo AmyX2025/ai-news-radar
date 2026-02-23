@@ -1,44 +1,44 @@
 {
-  "generated_at": "2026-02-23T13:06:33.297424Z",
+  "generated_at": "2026-02-23T13:22:52.061133Z",
   "sites": [
     {
       "site_id": "techurls",
       "site_name": "TechURLs",
-      "ok": true,
-      "item_count": 405,
-      "duration_ms": 405,
-      "error": null
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 21113,
+      "error": "HTTPSConnectionPool(host='techurls.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
     },
     {
       "site_id": "buzzing",
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 744,
-      "duration_ms": 252,
+      "duration_ms": 20992,
       "error": null
     },
     {
       "site_id": "iris",
       "site_name": "Info Flow",
-      "ok": true,
-      "item_count": 439,
-      "duration_ms": 12615,
-      "error": null
+      "ok": false,
+      "item_count": 0,
+      "duration_ms": 36821,
+      "error": "HTTPSConnectionPool(host='iris.findtruman.io', port=443): Max retries exceeded with url: /web/info_flow (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))"
     },
     {
       "site_id": "bestblogs",
       "site_name": "BestBlogs",
       "ok": true,
       "item_count": 83,
-      "duration_ms": 3538,
+      "duration_ms": 11857,
       "error": null
     },
     {
       "site_id": "tophub",
       "site_name": "TopHub",
       "ok": true,
-      "item_count": 2891,
-      "duration_ms": 1306,
+      "item_count": 2890,
+      "duration_ms": 33137,
       "error": null
     },
     {
@@ -46,7 +46,7 @@
       "site_name": "Zeli",
       "ok": true,
       "item_count": 2,
-      "duration_ms": 455,
+      "duration_ms": 5169,
       "error": null
     },
     {
@@ -54,7 +54,7 @@
       "site_name": "AI HubToday",
       "ok": true,
       "item_count": 31,
-      "duration_ms": 249,
+      "duration_ms": 1645,
       "error": null
     },
     {
@@ -62,44 +62,105 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 1690,
+      "duration_ms": 514,
       "error": null
     },
     {
       "site_id": "aihot",
       "site_name": "AI今日热榜",
-      "ok": false,
-      "item_count": 0,
-      "duration_ms": 168,
-      "error": "403 Client Error: Forbidden for url: https://aihot.today/"
+      "ok": true,
+      "item_count": 491,
+      "duration_ms": 3312,
+      "error": null
     },
     {
       "site_id": "newsnow",
       "site_name": "NewsNow",
       "ok": true,
-      "item_count": 1406,
-      "duration_ms": 684,
+      "item_count": 1397,
+      "duration_ms": 9432,
       "error": null
+    },
+    {
+      "site_id": "opmlrss",
+      "site_name": "OPML RSS",
+      "ok": true,
+      "partial_failures": 1,
+      "item_count": 758,
+      "duration_ms": 5887,
+      "error": "1 feeds failed",
+      "feed_count": 3,
+      "effective_feed_count": 3,
+      "ok_feed_count": 2,
+      "failed_feed_count": 1,
+      "skipped_feed_count": 0,
+      "replaced_feed_count": 0
     }
   ],
   "successful_sites": 9,
   "failed_sites": [
-    "aihot"
+    "techurls",
+    "iris"
   ],
   "zero_item_sites": [],
-  "fetched_raw_items": 6021,
-  "items_before_topic_filter": 4852,
-  "items_in_24h": 419,
+  "fetched_raw_items": 6416,
+  "items_before_topic_filter": 5392,
+  "items_in_24h": 603,
   "rss_opml": {
-    "enabled": false,
-    "path": null,
-    "feed_total": 0,
-    "effective_feed_total": 0,
-    "ok_feeds": 0,
-    "failed_feeds": [],
+    "enabled": true,
+    "path": "feeds/follow.opml",
+    "feed_total": 3,
+    "effective_feed_total": 3,
+    "ok_feeds": 2,
+    "failed_feeds": [
+      "https://openai.com/news/rss.xml"
+    ],
     "zero_item_feeds": [],
     "skipped_feeds": [],
     "replaced_feeds": [],
-    "feeds": []
+    "feeds": [
+      {
+        "site_id": "opmlrss:33e649875b",
+        "site_name": "OPML RSS",
+        "feed_title": "Hugging Face Blog",
+        "feed_url": "https://huggingface.co/blog/feed.xml",
+        "effective_feed_url": "https://huggingface.co/blog/feed.xml",
+        "ok": true,
+        "item_count": 738,
+        "duration_ms": 1759,
+        "error": null,
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false
+      },
+      {
+        "site_id": "opmlrss:969629fda3",
+        "site_name": "OPML RSS",
+        "feed_title": "InfoQ CN",
+        "feed_url": "https://www.infoq.cn/feed",
+        "effective_feed_url": "https://www.infoq.cn/feed",
+        "ok": true,
+        "item_count": 20,
+        "duration_ms": 243,
+        "error": null,
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false
+      },
+      {
+        "site_id": "opmlrss:3ae57466b5",
+        "site_name": "OPML RSS",
+        "feed_title": "OpenAI News",
+        "feed_url": "https://openai.com/news/rss.xml",
+        "effective_feed_url": "https://openai.com/news/rss.xml",
+        "ok": false,
+        "item_count": 0,
+        "duration_ms": 3885,
+        "error": "HTTPSConnectionPool(host='openai.com', port=443): Max retries exceeded with url: /news/rss.xml (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))",
+        "skipped": false,
+        "skip_reason": null,
+        "replaced": false
+      }
+    ]
   }
 }

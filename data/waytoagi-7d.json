@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-03-05T08:25:21.844158Z",
+  "generated_at": "2026-03-05T09:03:45.672318Z",
   "timezone": "Asia/Shanghai",
   "root_url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview",
   "history_url": "https://waytoagi.feishu.cn/wiki/FjiOwWp2giA7hRk6jjfcPioCnAc",
   "window_days": 7,
   "latest_date": "2026-03-05",
-  "count_today": 4,
+  "count_today": 5,
   "updates_today": [
     {
       "date": "2026-03-05",
@@ -19,6 +19,11 @@
     },
     {
       "date": "2026-03-05",
+      "title": "在 macOS 上安装 OpenClaw，很多人都会遇到安全、环境冲突、操作复杂的问题。作者对比了 Docker、Python 虚拟环境、Node 虚拟环境三种主流方案，最终选定最稳定、无冲突、适配性最强的 Node 虚拟环境方案，并把完整流程封装成 TRAE 技能。新手不用懂命令行、不用折腾环境配置，只需和 TRAE 聊天式交互，就能轻松完成安装。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-03-05",
       "title": "Google官方推出了Workspace CLI 工具！刚上线就星标暴涨，它将 Drive、Gmail、日历等所有 Workspace API 封装成命令行指令，输出全是结构化的JSON，Agent 可以直接解析调用。而且支持实时同步 API 更新，无需等版本迭代，还能通过命令行、MCP Server、Skills 三种方式接入 Agent。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
@@ -28,7 +33,7 @@
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     }
   ],
-  "count_7d": 45,
+  "count_7d": 46,
   "updates_7d": [
     {
       "date": "2026-03-05",
@@ -38,6 +43,11 @@
     {
       "date": "2026-03-05",
       "title": "菲尔兹奖得主陶哲轩的最新演讲揭秘：保守的数学领域正在被形式验证与AI联手撬动。形式验证打破信任壁垒，让匿名大规模协作成为可能，他主导的项目50人三个月就攻克2200万道代数题，远超以往研究规模。AI虽然能解出奥赛题却常常犯会基础错误，它的核心价值不是替代数学家，而是包揽海量中等难度问题，把科研“蛋糕”做大，让人类可以聚焦核心突破，这或许就是AI与科学协作的未来方向。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-03-05",
+      "title": "在 macOS 上安装 OpenClaw，很多人都会遇到安全、环境冲突、操作复杂的问题。作者对比了 Docker、Python 虚拟环境、Node 虚拟环境三种主流方案，最终选定最稳定、无冲突、适配性最强的 Node 虚拟环境方案，并把完整流程封装成 TRAE 技能。新手不用懂命令行、不用折腾环境配置，只需和 TRAE 聊天式交互，就能轻松完成安装。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {

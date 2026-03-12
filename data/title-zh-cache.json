@@ -4337,5 +4337,8 @@
   "Runner AI": "跑步者人工智能",
   "AI-powered Product Tour": "人工智能驱动的产品之旅",
   "UseDesktop": "使用桌面",
-  "CRusTTY: A pedagogical C interpreter with time-travel debugging capabilities": "CRusTTY：具有时间旅行调试功能的教学 C 解释器"
+  "CRusTTY: A pedagogical C interpreter with time-travel debugging capabilities": "CRusTTY：具有时间旅行调试功能的教学 C 解释器",
+  "NeuralAgent": "神经代理",
+  "Parametricity, or Comptime is Bonkers": "参数化或 Comptime 很疯狂",
+  "I Ditched Elasticsearch for Meilisearch": "我放弃了 Elasticsearch，转而使用 Meil​​isearch"
 }

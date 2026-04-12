@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-12T21:54:11.562175Z",
+  "generated_at": "2026-04-12T22:19:27.310446Z",
   "sites": [
     {
       "site_id": "techurls",
       "site_name": "TechURLs",
       "ok": true,
       "item_count": 405,
-      "duration_ms": 498,
+      "duration_ms": 892,
       "error": null
     },
     {
@@ -14,7 +14,7 @@
       "site_name": "Buzzing",
       "ok": true,
       "item_count": 768,
-      "duration_ms": 376,
+      "duration_ms": 638,
       "error": null
     },
     {
@@ -22,7 +22,7 @@
       "site_name": "Info Flow",
       "ok": true,
       "item_count": 356,
-      "duration_ms": 11138,
+      "duration_ms": 18318,
       "error": null
     },
     {
@@ -30,23 +30,23 @@
       "site_name": "BestBlogs",
       "ok": true,
       "item_count": 0,
-      "duration_ms": 62348,
+      "duration_ms": 4198,
       "error": null
     },
     {
       "site_id": "tophub",
       "site_name": "TopHub",
       "ok": true,
-      "item_count": 2843,
-      "duration_ms": 2118,
+      "item_count": 2844,
+      "duration_ms": 1430,
       "error": null
     },
     {
       "site_id": "zeli",
       "site_name": "Zeli",
       "ok": true,
-      "item_count": 64,
-      "duration_ms": 411,
+      "item_count": 65,
+      "duration_ms": 483,
       "error": null
     },
     {
@@ -62,7 +62,7 @@
       "site_name": "AIbase",
       "ok": true,
       "item_count": 20,
-      "duration_ms": 2212,
+      "duration_ms": 2532,
       "error": null
     },
     {
@@ -70,7 +70,7 @@
       "site_name": "AI今日热榜",
       "ok": false,
       "item_count": 0,
-      "duration_ms": 259,
+      "duration_ms": 45,
       "error": "403 Client Error: Forbidden for url: https://aihot.today/"
     },
     {
@@ -78,7 +78,7 @@
       "site_name": "NewsNow",
       "ok": true,
       "item_count": 144,
-      "duration_ms": 774,
+      "duration_ms": 534,
       "error": null
     }
   ],
@@ -89,9 +89,9 @@
   "zero_item_sites": [
     "bestblogs"
   ],
-  "fetched_raw_items": 4601,
-  "items_before_topic_filter": 5759,
-  "items_in_24h": 538,
+  "fetched_raw_items": 4603,
+  "items_before_topic_filter": 5783,
+  "items_in_24h": 540,
   "rss_opml": {
     "enabled": false,
     "path": null,

@@ -1,15 +1,20 @@
 {
-  "generated_at": "2026-07-18T17:26:27.636145Z",
+  "generated_at": "2026-07-18T18:13:21.707721Z",
   "timezone": "Asia/Shanghai",
   "root_url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview",
   "history_url": "https://waytoagi.feishu.cn/wiki/FjiOwWp2giA7hRk6jjfcPioCnAc",
   "window_days": 7,
   "latest_date": "2026-07-18",
-  "count_today": 3,
+  "count_today": 4,
   "updates_today": [
     {
       "date": "2026-07-18",
       "title": "看到Claude Code两周写出100万行代码，很多人第一反应是：以后迁移、重构是不是能直接丢给 AI 跑？老金这篇文章把兴奋感往回拽了一下——真正值得学的不是“跑得快”，而是背后的规则书、裁判、任务账本和断点。长任务可以交给 AI 扩产，但完成标准、测试验证、错误回滚和最终验收，必须提前设计好。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-07-18",
+      "title": "想让智能体真正操作浏览器，CDP是绕不开的一层底座。作者从 DevTools 背后的通信协议讲起，带大家看看Chrome如何通过JSON 命令、事件、Target、Session 暴露页面、网络、JS 运行时、输入和性能诊断能力。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
@@ -23,11 +28,16 @@
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     }
   ],
-  "count_7d": 31,
+  "count_7d": 32,
   "updates_7d": [
     {
       "date": "2026-07-18",
       "title": "看到Claude Code两周写出100万行代码，很多人第一反应是：以后迁移、重构是不是能直接丢给 AI 跑？老金这篇文章把兴奋感往回拽了一下——真正值得学的不是“跑得快”，而是背后的规则书、裁判、任务账本和断点。长任务可以交给 AI 扩产，但完成标准、测试验证、错误回滚和最终验收，必须提前设计好。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-07-18",
+      "title": "想让智能体真正操作浏览器，CDP是绕不开的一层底座。作者从 DevTools 背后的通信协议讲起，带大家看看Chrome如何通过JSON 命令、事件、Target、Session 暴露页面、网络、JS 运行时、输入和性能诊断能力。",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {

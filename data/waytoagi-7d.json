@@ -1,15 +1,25 @@
 {
-  "generated_at": "2026-09-19T19:27:54.446655Z",
+  "generated_at": "2026-09-19T21:34:10.460563Z",
   "timezone": "Asia/Shanghai",
   "root_url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview",
   "history_url": "https://waytoagi.feishu.cn/wiki/FjiOwWp2giA7hRk6jjfcPioCnAc",
   "window_days": 7,
   "latest_date": "2026-09-19",
-  "count_today": 4,
+  "count_today": 6,
   "updates_today": [
     {
       "date": "2026-09-19",
       "title": "这篇把 Trading Agent 拆成一条量化流水线：扫描层找异常，推理层生成假设和回测脚本，证伪层用多重检验、滑点手续费、point-in-time 数据筛掉假策略，执行层只允许确定性代码和模拟盘。文中还梳理了统计套利、期权波动率、因子残差、内部人交易四类方向。想用 AI 做交易系统、策略研究或风控自动化的，建议先看看这套“先证伪，再自动化”的工程思路。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "我们一直把大语言模型（LLM）当作解决所有 AI 问题的万能锤子，即便是简单的决策也是如此。Jev 能在毫秒级处理这些决策，成本仅为传统方法的一小部分。让我们来理解它的工作原理及其适用场景。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "想把陌生领域的方法论做成 Skill，最难的常常不是写规则，而是不知道该从哪本靠谱的知识源开始。卡尔分享了一个很实用的 QBS 方法：先把问题说清楚，让 GPT-6 找到能解决问题的书，阅读相关章节，再把方法提炼成可执行 Skill，并用新场景试跑验证。可以上手试试！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {
@@ -28,11 +38,21 @@
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     }
   ],
-  "count_7d": 32,
+  "count_7d": 34,
   "updates_7d": [
     {
       "date": "2026-09-19",
       "title": "这篇把 Trading Agent 拆成一条量化流水线：扫描层找异常，推理层生成假设和回测脚本，证伪层用多重检验、滑点手续费、point-in-time 数据筛掉假策略，执行层只允许确定性代码和模拟盘。文中还梳理了统计套利、期权波动率、因子残差、内部人交易四类方向。想用 AI 做交易系统、策略研究或风控自动化的，建议先看看这套“先证伪，再自动化”的工程思路。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "我们一直把大语言模型（LLM）当作解决所有 AI 问题的万能锤子，即便是简单的决策也是如此。Jev 能在毫秒级处理这些决策，成本仅为传统方法的一小部分。让我们来理解它的工作原理及其适用场景。",
+      "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
+    },
+    {
+      "date": "2026-09-19",
+      "title": "想把陌生领域的方法论做成 Skill，最难的常常不是写规则，而是不知道该从哪本靠谱的知识源开始。卡尔分享了一个很实用的 QBS 方法：先把问题说清楚，让 GPT-6 找到能解决问题的书，阅读相关章节，再把方法提炼成可执行 Skill，并用新场景试跑验证。可以上手试试！",
       "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e?fromScene=spaceOverview"
     },
     {

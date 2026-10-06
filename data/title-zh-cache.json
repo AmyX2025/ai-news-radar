@@ -25550,5 +25550,8 @@
   "The era of software quality, or the era of ostriches?": "软件质量时代，还是鸵鸟时代？",
   "Is mathematics over, or just graduating?": "数学结束了，还是刚刚毕业？",
   "Trump chooses top spy boss to run new AI taskforce": "特朗普选择最高间谍老板来管理新的人工智能特别工作组",
-  "Qualcomm licenses patents on Huawei’s LogicFolding chip tech": "高通获得华为 LogicFolding 芯片技术专利授权"
+  "Qualcomm licenses patents on Huawei’s LogicFolding chip tech": "高通获得华为 LogicFolding 芯片技术专利授权",
+  "Jiti – Grow a running Lisp application by talking to it": "Jiti – 通过与正在运行的 Lisp 应用程序交谈来扩展它",
+  "Lunatik 5.0: scripting the Linux kernel with Lua, now with eBPF integration": "Lunatik 5.0：使用 Lua 编写 Linux 内核脚本，现在集成了 eBPF",
+  "Another step towards Elm 1.0": "迈向 Elm 1.0 的又一步"
 }
